@@ -16,8 +16,8 @@ FOREACH(module ${CHIBIOS_HAL_MODULES})
   SET(CHIBIOS_${module}_SOURCES ${module}.c)
   SET(CHIBIOS_${module}_SEARCH_HEADERS ${module}.h)
   
-  IF(${module} STREQUAL mmcsd)
-    SET(CHIBIOS_${module}_SOURCES hal_mmcsd.c)
+  IF(${module} STREQUAL sdc)
+    SET(CHIBIOS_${module}_SOURCES ${CHIBIOS_${module}_SOURCES} hal_mmcsd.c)
   ENDIF()
 ENDFOREACH()
 
